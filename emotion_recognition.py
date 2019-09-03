@@ -1,6 +1,6 @@
 from data_extractor import load_data
 from utils import extract_feature, AVAILABLE_EMOTIONS
-#from create_csv import write_emodb_csv, write_tess_ravdess_csv, write_custom_csv
+from create_csv import write_emodb_csv, write_tess_ravdess_csv, write_custom_csv
 
 from sklearn.metrics import accuracy_score, make_scorer, fbeta_score, mean_squared_error, mean_absolute_error
 from sklearn.metrics import confusion_matrix
@@ -73,7 +73,7 @@ class EmotionRecognizer:
         # set metadata path file names
         self._set_metadata_filenames()
         # write csv's anyway
-        #self.write_csv()
+        self.write_csv()
 
         # boolean attributes
         self.data_loaded = False
